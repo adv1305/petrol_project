@@ -34,20 +34,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     public void onBindViewHolder(@NonNull RecyclerAdapter.ViewHolder holder, int position) {
         Output output = arrayList.get(position);
 
-        holder.cdOrderNo.setText(output.getOrderNo());
+        holder.cdOrderNo.setText(String.valueOf(position + 1));
         holder.cdTime.setText(output.getTime());
         holder.vhModelTxt.setText(output.getVehicleModel());
         holder.vhRegnoTxt.setText(output.getVehicleRegNo());
         holder.srvAmountTxt.setText(output.getServiceAmount());
         holder.addCommentTxt.setText(output.getAdditionalComment());
-
+        holder.addNotesTxt.setText(output.getAdditionalNotes());
+        holder.cddate.setText(output.getDate());
     }
-
-//    public void addStudent(String recipeowner, String recipename, String description) {
-//        Output output = new Output(recipeowner, recipename,description);
-//        arrayList.add(student);
-//        notifyItemInserted(arrayList.size() - 1);
-//    }
 
 
     @Override
@@ -57,7 +52,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView cdOrderNo, cdTime, vhModelTxt, vhRegnoTxt, srvAmountTxt, addCommentTxt, addNotesTxt;
+        TextView cdOrderNo, cdTime, vhModelTxt, vhRegnoTxt, srvAmountTxt, addCommentTxt, addNotesTxt,cddate;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,7 +64,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             srvAmountTxt = itemView.findViewById(R.id.srv_amount_txt);
             addCommentTxt = itemView.findViewById(R.id.add_comment_txt);
             addNotesTxt = itemView.findViewById(R.id.add_notes_txt);
-
+            cddate = itemView.findViewById(R.id.cddate);
 
         }
     }

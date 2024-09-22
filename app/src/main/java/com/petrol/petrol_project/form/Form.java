@@ -17,12 +17,31 @@ public class Form {
     private String cardExpiryDate;
     private String cardCVV;
     private String additionalNotes;
+    private String requestId;
+    private String date;
+    private String time;
 
     public Form() {
         // Required empty constructor
     }
 
-    public Form(String fuelType, String fullName, String email, String phone, String vehicleModel, String vehicleRegNo, String serviceAmount, String additionalComment, String streetAddress, String city, String state, String pincode, String cardNumber, String cardExpiryDate, String cardCVV, String additionalNotes) {
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public Form(String fuelType, String fullName, String email, String phone, String vehicleModel, String vehicleRegNo, String serviceAmount, String additionalComment, String streetAddress, String city, String state, String pincode, String cardNumber, String cardExpiryDate, String cardCVV, String additionalNotes, String date, String time) {
         this.fuelType = fuelType;
         this.fullName = fullName;
         this.email = email;
@@ -39,8 +58,11 @@ public class Form {
         this.cardExpiryDate = cardExpiryDate;
         this.cardCVV = cardCVV;
         this.additionalNotes = additionalNotes;
+        this.date = date;
+        this.time = time;
     }
 
+    // Getters and setters
     public String getFuelType() {
         return fuelType;
     }
@@ -167,5 +189,13 @@ public class Form {
 
     public void setAdditionalNotes(String additionalNotes) {
         this.additionalNotes = additionalNotes;
+    }
+
+    public String getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(String requestId) {
+        this.requestId = requestId;
     }
 }

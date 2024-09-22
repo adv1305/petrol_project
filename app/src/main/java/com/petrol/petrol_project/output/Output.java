@@ -4,6 +4,7 @@ public class Output {
 
     private String orderNo;
     private String time;
+    private String date; // Add date field
     private String additionalComment;
     private String additionalNotes;
     private String cardCVV;
@@ -14,10 +15,6 @@ public class Output {
     private String fuelType;
     private String fullName;
     private String phone;
-
-    public Output() {
-    }
-
     private String pincode;
     private String serviceAmount;
     private String state;
@@ -25,12 +22,16 @@ public class Output {
     private String vehicleModel;
     private String vehicleRegNo;
 
-    public Output(String orderNo, String time, String additionalComment, String additionalNotes, String cardCVV,
+    public Output() {
+    }
+
+    public Output(String orderNo, String time, String date, String additionalComment, String additionalNotes, String cardCVV,
                   String cardExpiryDate, String cardNumber, String city, String email, String fuelType,
                   String fullName, String phone, String pincode, String serviceAmount, String state,
                   String streetAddress, String vehicleModel, String vehicleRegNo) {
         this.orderNo = orderNo;
         this.time = time;
+        this.date = date; // Initialize date
         this.additionalComment = additionalComment;
         this.additionalNotes = additionalNotes;
         this.cardCVV = cardCVV;
@@ -64,6 +65,14 @@ public class Output {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getDate() {
+        return date; // Getter for date
+    }
+
+    public void setDate(String date) {
+        this.date = date; // Setter for date
     }
 
     public String getAdditionalComment() {

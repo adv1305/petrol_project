@@ -3,6 +3,7 @@ package com.petrol.petrol_project;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -16,6 +17,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.petrol.petrol_project.form.Form;
+import com.petrol.petrol_project.util.FirebaseConstants;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class request_form extends AppCompatActivity {
 
@@ -90,6 +96,9 @@ public class request_form extends AppCompatActivity {
                 String cardExpiryDate = pay_expdate_txt.getText().toString();
                 String cardCVV = pay_cvv_txt.getText().toString();
                 String additionalNotes = add_notes_txt.getText().toString();
+                String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+                String time = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+
 
                 if (TextUtils.isEmpty(fullName) || TextUtils.isEmpty(email) || TextUtils.isEmpty(phone) ||
                         TextUtils.isEmpty(vehicleModel) || TextUtils.isEmpty(vehicleRegNo) || TextUtils.isEmpty(serviceAmount) ||
@@ -100,15 +109,20 @@ public class request_form extends AppCompatActivity {
                     return;
                 }
 
-                Form form = new Form(fuelType, fullName, email, phone, vehicleModel, vehicleRegNo, serviceAmount, additionalComment, streetAddress, city, state, pincode, cardNumber, cardExpiryDate, cardCVV, additionalNotes);
+                Form form = new Form(fuelType, fullName, email, phone, vehicleModel, vehicleRegNo, serviceAmount, additionalComment, streetAddress, city, state, pincode, cardNumber, cardExpiryDate, cardCVV, additionalNotes,date,time);
 
-                db.collection("requests").document(uid)
+                String requestId = FirebaseFirestore.getInstance().collection(FirebaseConstants.REQUEST.toString()).document().getId();
+
+                form.setRequestId(requestId);
+
+                db.collection(FirebaseConstants.USER_COLLECTION.toString()).document(uid).collection(FirebaseConstants.REQUEST.toString()).document(requestId)
                         .set(form)
                         .addOnSuccessListener(documentReference -> {
                             Toast.makeText(this, "Form Submitted Successfully", Toast.LENGTH_SHORT).show();
                         })
                         .addOnFailureListener(e -> {
-                            Toast.makeText(this, "Failed to Submit Form", Toast.LENGTH_SHORT).show();
+                            Log.d("check", e.getMessage());
+                            Toast.makeText(this, "Failed to Submit Form"+ e.getMessage(), Toast.LENGTH_SHORT).show();
                         });
             } else {
                 Intent intent = new Intent(this, MainActivity.class);
