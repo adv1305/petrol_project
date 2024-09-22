@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "255203203868",
+    "project_id": "petrol-project-50cce",
+    "storage_bucket": "petrol-project-50cce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255203203868:android:cd5f516523a134e2a2b8d9",
+        "android_client_info": {
+          "package_name": "com.petrol.petrol_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ-g5J6bHBVRnRKjN4dnG4P2UTnUTpe2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

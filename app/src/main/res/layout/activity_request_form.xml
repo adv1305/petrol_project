@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".request_form">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@android:color/background_light">
+
+        <TextView
+            android:id="@+id/reqform_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REQUEST FORM"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/customer_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Information"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Full Name"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/email_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email Address"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/phone_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Phone Number"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/vh_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Information"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/vh_model_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Vehicle Model"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/vh_regno_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:hint="Vehicle Registration No"
+            android:inputType="text"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/srv_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Service Information"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/srv_amount_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Required Fuel Amount (in liters)"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/add_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional Service"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/add_comment_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Example: oil change, tire check, etc"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/dl_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery Information"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/dl_street_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Street Address"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/dl_city_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="City"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/dl_state_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="State"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/dl_pincode_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Pincode"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/pay_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Information"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/pay_cre_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Credit Card"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/black"/>
+
+            <RadioButton
+                android:id="@+id/pay_deb_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Debit Card"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/black"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/pay_cardno_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Card Number"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/pay_expdate_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Card Expiry Date"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/pay_cvv_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="CVV"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/add_info_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional Information"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/add_notes_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Special Instructions/Notes"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="16dp"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Submit" />
+
+    </LinearLayout>
+</ScrollView>
