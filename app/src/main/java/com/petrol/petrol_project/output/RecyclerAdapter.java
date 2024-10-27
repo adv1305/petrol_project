@@ -38,7 +38,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.cdTime.setText(output.getTime());
         holder.vhModelTxt.setText(output.getVehicleModel());
         holder.vhRegnoTxt.setText(output.getVehicleRegNo());
-        holder.srvAmountTxt.setText(output.getServiceAmount());
+        holder.srvAmountTxt.setText(output.getServiceAmount()+" litres");
         holder.addCommentTxt.setText(output.getAdditionalComment());
         holder.addNotesTxt.setText(output.getAdditionalNotes());
         holder.cddate.setText(output.getDate());

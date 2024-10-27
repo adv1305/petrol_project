@@ -40,8 +40,8 @@ import java.util.Locale;
 
 public class petrol_homepage extends AppCompatActivity {
 
-    ImageButton img0, img1, img2, img3;
-    Button ex_btn;
+    ImageButton img1, img2, img3,profile_btn;
+    Button ex_btn,logout_btn;
     TextView req_txt;
 
     RecyclerView oprecycler_view;
@@ -55,7 +55,6 @@ public class petrol_homepage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_petrol_homepage);
 
         if (auth.getCurrentUser() == null) {
@@ -64,10 +63,11 @@ public class petrol_homepage extends AppCompatActivity {
             finish();
         }
 
-        img0 = findViewById(R.id.img0);
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
         img3 = findViewById(R.id.img3);
+        profile_btn = findViewById(R.id.profile_btn);
+        logout_btn = findViewById(R.id.logout_btn);
 
         ex_btn = findViewById(R.id.ex_btn);
         req_txt = findViewById(R.id.req_txt);
@@ -90,7 +90,7 @@ public class petrol_homepage extends AppCompatActivity {
                 .document(currentUser.getUid())
                 .collection(FirebaseConstants.REQUEST.toString());
 
-
+        recyclerAdapter.notifyDataSetChanged();
 
 
 
@@ -154,6 +154,24 @@ public class petrol_homepage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent4 = new Intent(petrol_homepage.this, productpage.class);
                 startActivity(intent4);
+            }
+        });
+
+        profile_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent5 = new Intent(petrol_homepage.this, profile.class);
+                startActivity(intent5);
+            }
+        });
+
+        logout_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                Intent intent = new Intent(petrol_homepage.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
