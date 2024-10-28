@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.ComponentActivity; // Changed from EdgeToEdge to ComponentActivity
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.petrol.petrol_project.R;
@@ -21,6 +22,7 @@ public class car_accessories extends AppCompatActivity { // Updated class name
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_car_accessories); // Ensure the layout file name matches
 
         // Initialize views

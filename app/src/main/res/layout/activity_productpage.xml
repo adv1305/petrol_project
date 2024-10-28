@@ -6,88 +6,92 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:paddingTop="40dp"
+    android:background="@drawable/welcome_bg"
     tools:context=".product_page.productpage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/prod_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Product Categories"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:gravity="center"
         android:paddingBottom="16dp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@color/primary"/>
 
     <Button
         android:id="@+id/lubricants_oils_btn"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:text="Lubricants and Oils"
         android:layout_marginBottom="10dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:backgroundTint="?android:attr/colorButtonNormal"
-        android:textColor="@android:color/black"
+        android:background="@drawable/button_background_lubricants"
+        android:textColor="@color/primary"
         android:textSize="16sp"
         android:gravity="center"
-        android:layout_margin="2dp"
+        android:layout_margin="12dp"
         android:backgroundTintMode="add"/>
 
     <Button
         android:id="@+id/car_accessories_btn"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:background="@drawable/button_background_lubricants"
+        android:layout_height="50dp"
         android:text="Car Accessories"
         android:layout_marginBottom="10dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:backgroundTint="?android:attr/colorButtonNormal"
-        android:textColor="@android:color/black"
+        android:textColor="@color/primary"
         android:textSize="16sp"
         android:gravity="center"
-        android:layout_margin="2dp"
+        android:layout_margin="12dp"
         android:backgroundTintMode="add"/>
 
     <Button
         android:id="@+id/maintenance_tools_btn"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:text="Maintenance and Repair Tools"
         android:layout_marginBottom="10dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:backgroundTint="?android:attr/colorButtonNormal"
-        android:textColor="@android:color/black"
+        android:background="@drawable/button_background_lubricants"
+        android:textColor="@color/primary"
         android:textSize="16sp"
         android:gravity="center"
-        android:layout_margin="2dp"
+        android:layout_margin="12dp"
         android:backgroundTintMode="add"/>
 
     <Button
         android:id="@+id/cleaning_products_btn"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:text="Cleaning and Care Products"
         android:layout_marginBottom="10dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:backgroundTint="?android:attr/colorButtonNormal"
-        android:textColor="@android:color/black"
+        android:background="@drawable/button_background_lubricants"
+        android:textColor="@color/primary"
         android:textSize="16sp"
         android:gravity="center"
-        android:layout_margin="2dp"
+        android:layout_margin="12dp"
         android:backgroundTintMode="add"/>
 
     <Button
         android:id="@+id/safety_kits_btn"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:text="Safety and Emergency Kits"
         android:layout_marginBottom="10dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:backgroundTint="?android:attr/colorButtonNormal"
-        android:textColor="@android:color/black"
+        android:background="@drawable/button_background_lubricants_emergency"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:gravity="center"
-        android:layout_margin="2dp"
+        android:layout_margin="12dp"
         android:backgroundTintMode="add"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -5,10 +5,13 @@ import static android.content.ContentValues.TAG;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -18,7 +21,7 @@ import com.petrol.petrol_project.util.FirebaseConstants;
 public class profile extends AppCompatActivity {
 
     // Declare variables for each TextView
-    TextView tvFirstName, tvEmail, tvPhone;
+    TextInputEditText tvFirstName, tvEmail, tvPhone;
 
     // Initialize Firebase Auth instance
     FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -30,9 +33,8 @@ public class profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile);  // Assuming the XML file is named activity_main.xml
-
-
 
         // Initialize the TextViews
         tvFirstName = findViewById(R.id.tvFirstName);

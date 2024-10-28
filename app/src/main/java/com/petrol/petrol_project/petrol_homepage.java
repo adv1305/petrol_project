@@ -2,6 +2,7 @@ package com.petrol.petrol_project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,8 +42,8 @@ import java.util.Locale;
 
 public class petrol_homepage extends AppCompatActivity {
 
-    ImageButton img1, img2, img3,profile_btn;
-    Button ex_btn,logout_btn;
+    ImageButton img1, img2, img3,profile_btn,logout_btn;
+    Button ex_btn;
     TextView req_txt;
 
     RecyclerView oprecycler_view;
@@ -52,9 +54,12 @@ public class petrol_homepage extends AppCompatActivity {
     FirebaseAuth auth = FirebaseAuth.getInstance();
     FirebaseUser currentUser;
 
+    SwipeRefreshLayout swipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_petrol_homepage);
 
         if (auth.getCurrentUser() == null) {
@@ -84,6 +89,14 @@ public class petrol_homepage extends AppCompatActivity {
         currentUser = auth.getCurrentUser();
         db = FirebaseFirestore.getInstance();
 
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
+
+        if(currentUser == null){
+            Intent intent = new Intent(petrol_homepage.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         CollectionReference reference = FirebaseFirestore
                 .getInstance()
                 .collection(FirebaseConstants.USER_COLLECTION.toString())
@@ -92,14 +105,34 @@ public class petrol_homepage extends AppCompatActivity {
 
         recyclerAdapter.notifyDataSetChanged();
 
+        swipeRefreshLayout.setOnRefreshListener(() -> {
+            // Clear the current data
+            outputArrayList.clear();
+            recyclerAdapter.notifyDataSetChanged();
 
+            // Fetch data again from Firestore
+            CollectionReference referenceAgain = db.collection(FirebaseConstants.USER_COLLECTION.toString())
+                    .document(currentUser.getUid())
+                    .collection(FirebaseConstants.REQUEST.toString());
 
-        if(currentUser == null){
-            Intent intent = new Intent(petrol_homepage.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
-
+            referenceAgain.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            Output output = document.toObject(Output.class);
+                            outputArrayList.add(output);
+                        }
+                        recyclerAdapter.notifyDataSetChanged(); // Notify the adapter about data changes
+                    } else {
+                        Toast.makeText(petrol_homepage.this, "Error getting documents: " + task.getException(), Toast.LENGTH_SHORT).show();
+                        Log.d("Swipe Refresh", "onComplete: " + task.getException());
+                    }
+                    // Stop the refreshing animation
+                    swipeRefreshLayout.setRefreshing(false);
+                }
+            });
+        });
 
 
         reference.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -114,6 +147,7 @@ public class petrol_homepage extends AppCompatActivity {
                     recyclerAdapter.notifyDataSetChanged();  // Notify the adapter about data changes
                 } else {
                     Toast.makeText(petrol_homepage.this, "Error getting documents: " + task.getException(), Toast.LENGTH_SHORT).show();
+                    Log.d("Recycler data check", "onComplete: "+ task.getException());
                 }
             }
         });

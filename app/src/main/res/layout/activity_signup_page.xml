@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:background="@drawable/welcome_bg"
     android:orientation="vertical"
-    android:background="@android:color/background_light"
+    android:padding="25dp"
     tools:context=".signup_page">
 
     <TextView
@@ -14,10 +14,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
-        android:text="Sign Up"
-        android:textColor="@android:color/black"
+        android:text="Create Account"
+        android:textColor="@color/primary"
         android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Create an account so that you can explore all the features of the app"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         android:textStyle="bold" />
 
     <EditText
@@ -25,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"
         android:hint="Enter your full name"
         android:inputType="text"
         android:padding="12dp"
@@ -37,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
         android:padding="12dp"
@@ -49,6 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:padding="12dp"
@@ -61,6 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"
         android:hint="Enter Phone Number"
         android:inputType="phone"
         android:padding="12dp"
@@ -73,7 +89,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/black"
+        android:background="@drawable/button_background"
         android:text="SIGN UP"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
@@ -83,8 +99,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="Already have an account?"
+        android:layout_marginTop="40dp"
+        android:text="Already have an account"
+        android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:textSize="16sp" />
+        android:textSize="12sp" />
 </LinearLayout>

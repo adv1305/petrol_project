@@ -1,7 +1,5 @@
 package com.petrol.petrol_project;
 
-import static com.petrol.petrol_project.R.id.log_txt;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -34,14 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        EdgeToEdge.enable(this);
         log_txt= findViewById(R.id.log_txt);
         sig_txt= findViewById(R.id.sig_txt);
         log_email= findViewById(R.id.log_email);

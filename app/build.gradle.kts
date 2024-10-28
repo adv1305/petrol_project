@@ -44,4 +44,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation (libs.swiperefreshlayout)
+    implementation(kotlin("script-runtime"))
+    implementation (libs.material.v1100)
+    implementation (libs.circleimageview)
+
+
 }

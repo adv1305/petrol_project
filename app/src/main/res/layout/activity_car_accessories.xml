@@ -10,10 +10,12 @@
 
     <!-- Title -->
     <TextView
+        android:layout_marginTop="60dp"
         android:id="@+id/car_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Car Accessories"
+        android:textColor="@color/primary"
         android:textSize="24sp"
         android:padding="16dp"
         android:gravity="center"
@@ -26,11 +28,19 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="12dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="10dp"
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
+
 
             <!-- List of Products -->
             <LinearLayout
@@ -60,10 +70,12 @@
                         android:id="@+id/product_name_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="Car Phone Mount"
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:padding="4dp"
                         android:id="@+id/product_price_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -73,6 +85,9 @@
                 </LinearLayout>
 
                 <Button
+                    android:background="@drawable/button_background"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
                     android:id="@+id/add_to_cart_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -105,11 +120,13 @@
                     <TextView
                         android:id="@+id/product_name_2"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
                         android:text="Car Seat Organizer"
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:padding="4dp"
                         android:id="@+id/product_price_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -119,6 +136,9 @@
                 </LinearLayout>
 
                 <Button
+                    android:background="@drawable/button_background"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
                     android:id="@+id/add_to_cart_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -152,10 +172,12 @@
                         android:id="@+id/product_name_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="Dashboard Camera"
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:padding="4dp"
                         android:id="@+id/product_price_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -165,6 +187,9 @@
                 </LinearLayout>
 
                 <Button
+                    android:background="@drawable/button_background"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
                     android:id="@+id/add_to_cart_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -198,10 +223,12 @@
                         android:id="@+id/product_name_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="Car Air Purifier"
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:padding="4dp"
                         android:id="@+id/product_price_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -211,6 +238,9 @@
                 </LinearLayout>
 
                 <Button
+                    android:background="@drawable/button_background"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
                     android:id="@+id/add_to_cart_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -218,5 +248,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
     </ScrollView>
 </LinearLayout>

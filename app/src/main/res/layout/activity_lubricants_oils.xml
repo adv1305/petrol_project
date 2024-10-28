@@ -10,6 +10,8 @@
 
     <!-- Title -->
     <TextView
+        android:layout_marginTop="60dp"
+        android:textColor="@color/primary"
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,197 +28,228 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <!-- List of Products -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:id="@+id/product_image_1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/engine_oil"
-                    android:contentDescription="Engine Oil"/>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
-
-                    <TextView
-                        android:id="@+id/product_name_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Engine Oil"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/product_price_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$35"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/holo_green_dark"/>
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/add_to_cart_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add to Cart"/>
-            </LinearLayout>
+            android:layout_margin="12dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:background="?android:attr/selectableItemBackground">
+                android:padding="16dp">
 
-                <ImageView
-                    android:id="@+id/product_image_2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/brake_fluid"
-                    android:contentDescription="Brake Fluid"/>
-
+                <!-- List of Products -->
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackground">
 
-                    <TextView
-                        android:id="@+id/product_name_2"
+                    <ImageView
+                        android:id="@+id/product_image_1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/engine_oil"
+                        android:contentDescription="Engine Oil"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/product_name_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Engine Oil"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:padding="4dp"
+                            android:id="@+id/product_price_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$35"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button_background"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/add_to_cart_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Brake Fluid"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/product_price_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$18"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/holo_green_dark"/>
+                        android:text="Add to Cart"/>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/add_to_cart_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add to Cart"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:id="@+id/product_image_3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/transmission_fluid"
-                    android:contentDescription="Transmission Fluid"/>
-
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackground">
 
-                    <TextView
-                        android:id="@+id/product_name_3"
+                    <ImageView
+                        android:id="@+id/product_image_2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/brake_fluid"
+                        android:contentDescription="Brake Fluid"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/product_name_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Brake Fluid"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:padding="4dp"
+                            android:id="@+id/product_price_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$18"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button_background"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/add_to_cart_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Transmission Fluid"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/product_price_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$25"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/holo_green_dark"/>
+                        android:text="Add to Cart"/>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/add_to_cart_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add to Cart"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:id="@+id/product_image_4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/coolant"
-                    android:contentDescription="Coolant"/>
-
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackground">
 
-                    <TextView
-                        android:id="@+id/product_name_4"
+                    <ImageView
+                        android:id="@+id/product_image_3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/transmission_fluid"
+                        android:contentDescription="Transmission Fluid"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/product_name_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transmission Fluid"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:padding="4dp"
+                            android:id="@+id/product_price_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$25"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button_background"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/add_to_cart_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Coolant"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/product_price_4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$20"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/holo_green_dark"/>
+                        android:text="Add to Cart"/>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/add_to_cart_4"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add to Cart"/>
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/product_image_4"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/coolant"
+                        android:contentDescription="Coolant"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/product_name_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Coolant"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:padding="4dp"
+                            android:id="@+id/product_price_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$20"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button_background"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/add_to_cart_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add to Cart"/>
+                </LinearLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
     </ScrollView>
 </LinearLayout>

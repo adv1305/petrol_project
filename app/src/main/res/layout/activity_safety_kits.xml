@@ -10,6 +10,8 @@
 
     <!-- Title -->
     <TextView
+        android:layout_marginTop="60dp"
+        android:textColor="@color/primary"
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +47,7 @@
                     android:id="@+id/product_image_1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cng01"
+                    android:src="@drawable/cng_01"
                     android:contentDescription="Product Image 1"/>
 
                 <LinearLayout
@@ -57,6 +59,8 @@
                     android:paddingEnd="16dp">
 
                     <TextView
+                        android:padding="4dp"
+                        android:textColor="@color/black"
                         android:id="@+id/product_name_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -73,6 +77,9 @@
                 </LinearLayout>
 
                 <Button
+                    android:background="@drawable/button_background"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
                     android:id="@+id/add_to_cart_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -91,7 +98,7 @@
                     android:id="@+id/product_image_2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cng01"
+                    android:src="@drawable/cng_01"
                     android:contentDescription="Product Image 2"/>
 
                 <LinearLayout
@@ -103,6 +110,7 @@
                     android:paddingEnd="16dp">
 
                     <TextView
+                        android:textColor="@color/black"
                         android:id="@+id/product_name_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -110,6 +118,7 @@
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:padding="4dp"
                         android:id="@+id/product_price_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -119,6 +128,9 @@
                 </LinearLayout>
 
                 <Button
+                    android:background="@drawable/button_background"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
                     android:id="@+id/add_to_cart_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -137,7 +149,7 @@
                     android:id="@+id/product_image_3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cng01"
+                    android:src="@drawable/cng_01"
                     android:contentDescription="Product Image 3"/>
 
                 <LinearLayout
@@ -149,6 +161,7 @@
                     android:paddingEnd="16dp">
 
                     <TextView
+                        android:textColor="@color/black"
                         android:id="@+id/product_name_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -156,6 +169,7 @@
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:padding="4dp"
                         android:id="@+id/product_price_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -165,6 +179,9 @@
                 </LinearLayout>
 
                 <Button
+                    android:background="@drawable/button_background"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
                     android:id="@+id/add_to_cart_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -183,7 +200,7 @@
                     android:id="@+id/product_image_4"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cng01"
+                    android:src="@drawable/cng_01"
                     android:contentDescription="Product Image 4"/>
 
                 <LinearLayout
@@ -195,6 +212,7 @@
                     android:paddingEnd="16dp">
 
                     <TextView
+                        android:textColor="@color/black"
                         android:id="@+id/product_name_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -202,6 +220,7 @@
                         android:textSize="18sp"/>
 
                     <TextView
+                        android:padding="4dp"
                         android:id="@+id/product_price_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -211,6 +230,9 @@
                 </LinearLayout>
 
                 <Button
+                    android:background="@drawable/button_background"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
                     android:id="@+id/add_to_cart_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

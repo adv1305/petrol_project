@@ -10,6 +10,8 @@
 
     <!-- Title -->
     <TextView
+        android:layout_marginTop="60dp"
+        android:textColor="@color/primary"
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,197 +28,228 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:layout_margin="12dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="match_parent">
 
-            <!-- List of Products -->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:id="@+id/product_image_1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/diesel01"
-                    android:contentDescription="Product Image 1"/>
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
-
-                    <TextView
-                        android:id="@+id/product_name_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Product 1"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/product_price_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$100"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/holo_green_dark"/>
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/add_to_cart_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add to Cart"/>
-            </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:background="?android:attr/selectableItemBackground">
+                android:padding="16dp">
 
-                <ImageView
-                    android:id="@+id/product_image_2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/diesel01"
-                    android:contentDescription="Product Image 2"/>
-
+                <!-- List of Products -->
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackground">
 
-                    <TextView
-                        android:id="@+id/product_name_2"
+                    <ImageView
+                        android:id="@+id/product_image_1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="Product Image 1"
+                        android:src="@drawable/diesel_01" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/product_name_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Product 1"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:padding="4dp"
+                            android:id="@+id/product_price_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$100"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button_background"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/add_to_cart_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Product 2"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/product_price_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$150"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/holo_green_dark"/>
+                        android:text="Add to Cart"/>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/add_to_cart_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add to Cart"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:id="@+id/product_image_3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/diesel01"
-                    android:contentDescription="Product Image 3"/>
-
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackground">
 
-                    <TextView
-                        android:id="@+id/product_name_3"
+                    <ImageView
+                        android:id="@+id/product_image_2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/diesel_01"
+                        android:contentDescription="Product Image 2"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/product_name_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Product 2"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:padding="4dp"
+                            android:id="@+id/product_price_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$150"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button_background"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/add_to_cart_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Product 3"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/product_price_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$120"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/holo_green_dark"/>
+                        android:text="Add to Cart"/>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/add_to_cart_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add to Cart"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:padding="8dp"
-                android:background="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:id="@+id/product_image_4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/diesel01"
-                    android:contentDescription="Product Image 4"/>
-
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackground">
 
-                    <TextView
-                        android:id="@+id/product_name_4"
+                    <ImageView
+                        android:id="@+id/product_image_3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/diesel_01"
+                        android:contentDescription="Product Image 3"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/product_name_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Product 3"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:padding="4dp"
+                            android:id="@+id/product_price_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$120"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button_background"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/add_to_cart_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Product 4"
-                        android:textSize="18sp"/>
-
-                    <TextView
-                        android:id="@+id/product_price_4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$80"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/holo_green_dark"/>
+                        android:text="Add to Cart"/>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/add_to_cart_4"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Add to Cart"/>
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/product_image_4"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/diesel_01"
+                        android:contentDescription="Product Image 4"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/product_name_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Product 4"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:padding="4dp"
+                            android:id="@+id/product_price_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$80"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/holo_green_dark"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:background="@drawable/button_background"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/add_to_cart_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add to Cart"/>
+                </LinearLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </ScrollView>
 </LinearLayout>

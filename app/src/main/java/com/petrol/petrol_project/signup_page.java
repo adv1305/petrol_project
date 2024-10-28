@@ -56,6 +56,12 @@ public class signup_page extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
+        if (auth.getCurrentUser() != null) {
+            Intent intent = new Intent(signup_page.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         sig_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
