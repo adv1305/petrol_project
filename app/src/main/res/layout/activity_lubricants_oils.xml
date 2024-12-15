@@ -78,7 +78,7 @@
                             android:id="@+id/product_price_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$35"
+                            android:text="₹35"
                             android:textSize="16sp"
                             android:textColor="@android:color/holo_green_dark"/>
                     </LinearLayout>
@@ -129,7 +129,7 @@
                             android:id="@+id/product_price_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$18"
+                            android:text="₹18"
                             android:textSize="16sp"
                             android:textColor="@android:color/holo_green_dark"/>
                     </LinearLayout>
@@ -180,7 +180,7 @@
                             android:id="@+id/product_price_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$25"
+                            android:text="₹25"
                             android:textSize="16sp"
                             android:textColor="@android:color/holo_green_dark"/>
                     </LinearLayout>
@@ -231,7 +231,7 @@
                             android:id="@+id/product_price_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="$20"
+                            android:text="₹20"
                             android:textSize="16sp"
                             android:textColor="@android:color/holo_green_dark"/>
                     </LinearLayout>
