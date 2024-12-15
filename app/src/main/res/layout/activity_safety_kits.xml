@@ -47,8 +47,8 @@
                     android:id="@+id/product_image_1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cng_01"
-                    android:contentDescription="Product Image 1"/>
+                    android:src="@drawable/first_aid"
+                    android:contentDescription="First Aid Kit"/>
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -64,7 +64,7 @@
                         android:id="@+id/product_name_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Product 1"
+                        android:text="First Aid Kit"
                         android:textSize="18sp"/>
 
                     <TextView
@@ -98,7 +98,7 @@
                     android:id="@+id/product_image_2"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cng_01"
+                    android:src="@drawable/fire_extinguisher"
                     android:contentDescription="Product Image 2"/>
 
                 <LinearLayout
@@ -114,7 +114,7 @@
                         android:id="@+id/product_name_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Product 2"
+                        android:text="Fire Extinguisher"
                         android:textSize="18sp"/>
 
                     <TextView
@@ -149,7 +149,7 @@
                     android:id="@+id/product_image_3"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cng_01"
+                    android:src="@drawable/tire_tool"
                     android:contentDescription="Product Image 3"/>
 
                 <LinearLayout
@@ -165,7 +165,7 @@
                         android:id="@+id/product_name_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Product 3"
+                        android:text="Tire Tool Kit"
                         android:textSize="18sp"/>
 
                     <TextView
@@ -200,7 +200,7 @@
                     android:id="@+id/product_image_4"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/cng_01"
+                    android:src="@drawable/air_pump"
                     android:contentDescription="Product Image 4"/>
 
                 <LinearLayout
@@ -216,7 +216,7 @@
                         android:id="@+id/product_name_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Product 4"
+                        android:text="Air Pump"
                         android:textSize="18sp"/>
 
                     <TextView
